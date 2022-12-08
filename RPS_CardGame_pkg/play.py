@@ -25,9 +25,8 @@ class RPS_CardGame:
     def random_hand(self):
         self.hand = self.deck.pop()
 
-    @staticmethod
-    def is_valid_hand(hand):
-        return hand in RPS_CardGame.cards
+    def is_valid_hand(self, hand):
+        return hand in self.deck
     
     @classmethod
     def play(cls):
